@@ -1,5 +1,37 @@
-// Sayloud: one-time word highlight across the hero headline, the way the app reads.
+// Sayloud: mobile menu, sticky header tint, and a one-time word highlight across the hero headline, the way the app reads.
 (function () {
+  'use strict';
+
+  var header = document.querySelector('header');
+  var menuBtn = document.querySelector('.mobile-menu-btn');
+  var links = document.querySelector('.nav-links');
+
+  if (menuBtn && links) {
+    menuBtn.addEventListener('click', function () {
+      var open = links.classList.toggle('active');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        links.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && links.classList.contains('active')) {
+        links.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.focus();
+      }
+    });
+  }
+
+  if (header) {
+    var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   var title = document.querySelector('[data-reading]');
   if (!title) return;
 

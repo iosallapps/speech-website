@@ -1,0 +1,14 @@
+# Sayloud
+
+> Text to speech, speech to text and a teleprompter for iPhone and iPad, by Visto Apps (https://vistoapps.com).
+
+Sayloud reads PDFs, EPUBs, web articles, scanned pages and pasted text aloud with the current word highlighted, using built-in Apple voices on the device and optional cloud voices. It turns live speech and audio or video files into text on the device (Transcribe), and runs a teleprompter whose script follows your voice and can record video (Prompter). It needs iOS 18 or later, has no account, and is not yet on the App Store.
+
+Free to download with ads and monthly limits on transcription and Prompter sessions. A paid level removes ads and unlocks cloud voices, unlimited transcription and Prompter sessions and longer files, as a weekly or monthly subscription or a one-time lifetime purchase.
+
+## Pages
+- [Home](https://sayloudapp.com/)
+- [Support](https://sayloudapp.com/support.html)
+- [Privacy Policy](https://sayloudapp.com/privacy.html)
+- [Terms of Service](https://sayloudapp.com/terms.html)
+- [Visto Apps, the studio](https://vistoapps.com)
