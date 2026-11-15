@@ -3,22 +3,260 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sayloud: Text to Speech</title>
-<meta name="description" content="Sayloud reads any text aloud with natural voices, turns speech into text and runs a teleprompter that follows your voice.">
-<style>
-  :root { color-scheme: light dark; --bg: #ffffff; --fg: #111111; --muted: #555555; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #0d0d0f; --fg: #f2f2f2; --muted: #a0a0a6; } }
-  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--bg); color: var(--fg);
-         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding: 0 16px; }
-  main { max-width: 560px; text-align: center; }
-  h1 { font-size: 2.4rem; margin: 0 0 12px; }
-  p { color: var(--muted); font-size: 1.1rem; line-height: 1.5; }
-</style>
+<title>Sayloud: Text to Speech, Speech to Text and Prompter</title>
+<meta name="description" content="Sayloud is an iPhone app that reads PDFs, EPUBs, articles and scanned pages aloud with word highlighting, transcribes speech on your device, and runs a teleprompter that follows your voice.">
+<link rel="canonical" href="https://sayloudapp.com/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f8f5ff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#120440" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sayloud">
+<meta property="og:title" content="Sayloud: Text to Speech, Speech to Text and Prompter">
+<meta property="og:description" content="Listen to anything you read, write down what you say, and let your script follow your voice. An iPhone app, coming soon to the App Store.">
+<meta property="og:url" content="https://sayloudapp.com/">
+<meta property="og:image" content="https://sayloudapp.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Sayloud app icon, a glowing S around a sound wave, next to the words Text to Speech, Speech to Text and Prompter.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-<main>
-  <h1>Sayloud</h1>
-  <p>Text to speech with natural voices, speech to text and a teleprompter that follows your voice. Coming soon to the App Store.</p>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Sayloud home">
+      <img src="img/icon-96.png" alt="" width="34" height="34">
+      <span>Sayloud</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+      <h1 id="hero-title" data-reading>
+        <span class="line">Listen to anything you read.</span>
+        <span class="line">Write down what you say.</span>
+        <span class="line">Let your script follow your voice.</span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-lede">Sayloud is an iPhone app for text to speech, speech to text and a teleprompter that scrolls as you talk. No account, no sign up.</p>
+        <p class="hero-note">While it reads, Sayloud highlights each word so you can follow along.</p>
+        <div>
+          <!-- APP STORE LINK: when Sayloud is live, replace this <span> with
+               <a class="store-btn" href="https://apps.apple.com/app/idXXXXXXXXXX">
+                 <img src="img/icon-96.png" alt="" width="36" height="36">
+                 <span><small>Download on the</small>App Store</span>
+               </a> -->
+          <span class="store-btn">
+            <img src="img/icon-96.png" alt="" width="36" height="36">
+            <span><small>Coming soon to the</small>App Store</span>
+          </span>
+        </div>
+      </div>
+      </div>
+      <img class="hero-icon" src="img/icon-192.png" alt="The Sayloud app icon: a glowing S wrapped around a sound wave" width="192" height="192">
+    </div>
+  </section>
+
+  <div class="features" id="features">
+    <div class="wrap">
+
+      <section class="feature" aria-labelledby="tts-title">
+        <div>
+          <h2 id="tts-title">Text to Speech</h2>
+          <p>Open a document or paste some text and Sayloud reads it aloud. Each word lights up as it is spoken, so you can follow along or look away and find your place again.</p>
+          <p><strong>Built-in Apple voices</strong> run on your iPhone. Subscribers also get <strong>natural cloud voices</strong>.</p>
+          <ul class="sources" aria-label="What Sayloud can read">
+            <li>PDFs</li>
+            <li>EPUBs</li>
+            <li>Web articles</li>
+            <li>Scanned pages</li>
+            <li>Pasted text</li>
+          </ul>
+        </div>
+        <div class="stage" role="img" aria-label="Illustration: a PDF page being read aloud, with the current word highlighted and a playback bar below.">
+          <div class="page">
+            <div class="page-meta"><span>Field notes.pdf</span><span>Page 12</span></div>
+            <p><span class="said">The tide came in faster than the maps had promised, and by noon the</span> <mark>causeway</mark> was gone under a sheet of grey water.</p>
+          </div>
+          <div class="player">
+            <span class="play"></span>
+            <span class="track"></span>
+            <span>1.2×</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature" aria-labelledby="stt-title">
+        <div>
+          <h2 id="stt-title">Speech to Text</h2>
+          <p>Transcribe live while you talk, or turn an audio or video file into text.</p>
+          <p>Recognition runs <strong>on your iPhone</strong>, using Apple's on-device speech recognition. Your audio is not sent to us.</p>
+        </div>
+        <div class="stage" role="img" aria-label="Illustration: a sound wave above a transcript that is being written line by line.">
+          <div class="wave" aria-hidden="true">
+            <span style="--h:18%"></span><span style="--h:42%"></span><span style="--h:70%"></span><span style="--h:36%"></span><span style="--h:88%"></span><span style="--h:54%"></span><span style="--h:100%"></span><span style="--h:62%"></span><span style="--h:30%"></span><span style="--h:76%"></span><span style="--h:46%"></span><span style="--h:22%"></span><span style="--h:58%"></span><span style="--h:84%"></span><span style="--h:40%"></span><span style="--h:66%"></span><span style="--h:28%"></span><span style="--h:12%"></span>
+          </div>
+          <ol class="transcript">
+            <li><time>00:04</time><span>Okay, three things for Monday.</span></li>
+            <li><time>00:09</time><span>Send the draft to Sam before lunch.</span></li>
+            <li><time>00:15</time><span class="live">Book the room for the</span></li>
+          </ol>
+          <p class="on-device">Transcribing on this iPhone</p>
+        </div>
+      </section>
+
+      <section class="feature" aria-labelledby="prompter-title">
+        <div>
+          <h2 id="prompter-title">Prompter</h2>
+          <p>Paste your script and start talking. The Prompter listens as you speak and scrolls the text to keep up with you, so your eyes stay on the words, not on a button.</p>
+          <p>Turn on the camera to <strong>record video</strong> while you read.</p>
+        </div>
+        <div class="stage stage-prompter" role="img" aria-label="Illustration: a teleprompter script with the current line marked and a recording indicator.">
+          <span class="rec">Recording</span>
+          <div class="script">
+            <p>Hi, I'm Mara, and this is</p>
+            <p>week three of the bakery build.</p>
+            <p class="now">Today the oven finally arrives,</p>
+            <p>and we find out if the floor</p>
+            <p>can take the weight.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <section class="extras" aria-labelledby="extras-title">
+    <div class="wrap">
+      <h2 id="extras-title">Also in Sayloud</h2>
+      <ul>
+        <li>
+          <h3>Library</h3>
+          <p>Your documents, articles and scans in one place, on your iPhone.</p>
+        </li>
+        <li>
+          <h3>Custom pronunciations</h3>
+          <p>Teach Sayloud how to say a name or a term, and it reads it your way.</p>
+        </li>
+        <li>
+          <h3>Widget</h3>
+          <p>Get back to what you were listening to from your Home Screen.</p>
+        </li>
+        <li>
+          <h3>No account</h3>
+          <p>Open the app and start. There is nothing to sign up for.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="privacy" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap">
+      <h2 id="privacy-title">Your pages stay on your phone</h2>
+      <p class="intro">Sayloud has no account and no sign up. Here is what stays on your iPhone, and the few cases where something leaves it.</p>
+      <div class="ledger">
+        <section class="stays" aria-labelledby="stays-title">
+          <h3 id="stays-title">Stays on your iPhone</h3>
+          <ul>
+            <li>Your documents, imported files and pasted text</li>
+            <li>Your recordings, transcripts and settings</li>
+            <li>Speech recognition and transcription</li>
+            <li>Reading with the built-in voices</li>
+            <li>Text recognition when you scan a page</li>
+          </ul>
+        </section>
+        <section class="leaves" aria-labelledby="leaves-title">
+          <h3 id="leaves-title">Leaves your iPhone</h3>
+          <ul>
+            <li><strong>Cloud voices:</strong> the passage being read goes over an encrypted connection to our server and on to Inworld AI, which makes the audio. Prefer it stays put? Use a built-in voice.</li>
+            <li><strong>Web import:</strong> the app downloads the page straight from the website.</li>
+            <li><strong>Analytics and crash reports:</strong> sent to Google Firebase. Analytics follows your consent choice.</li>
+            <li><strong>Ads and purchases:</strong> free users see ads from Google AdMob. Apple and RevenueCat handle purchases.</li>
+          </ul>
+        </section>
+      </div>
+      <p class="more"><a href="privacy.html">Read the full privacy policy</a></p>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <h2 id="faq-title">Questions</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>No. There is no account and no sign up. Your documents and settings live on your iPhone.</p>
+        </details>
+        <details>
+          <summary>What can Sayloud read aloud?</summary>
+          <p>PDFs, EPUBs, web articles, scanned pages and text you paste. Each word is highlighted while it is read.</p>
+        </details>
+        <details>
+          <summary>What is the difference between built-in and cloud voices?</summary>
+          <p>Built-in voices are Apple's voices and run on your iPhone. Cloud voices are natural voices for subscribers: the text being read is sent to our server and to our speech provider to make the audio, so they need a connection.</p>
+        </details>
+        <details>
+          <summary>Does transcription happen on my iPhone?</summary>
+          <p>Yes. Live transcription and file transcription use Apple's on-device speech recognition. Your audio is not sent to us.</p>
+        </details>
+        <details>
+          <summary>Can the Prompter record video?</summary>
+          <p>Yes. It scrolls your script by following your voice and can record video at the same time. Recordings are saved to your photo library.</p>
+        </details>
+        <details>
+          <summary>Is Sayloud free?</summary>
+          <p>Yes, with ads. A weekly, monthly or yearly subscription, or a one-time lifetime purchase, removes ads and unlocks the cloud voices.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="wrap">
+      <h2 id="closing-title">Sayloud is coming to iPhone.</h2>
+      <!-- APP STORE LINK: when Sayloud is live, replace this <span> with
+           <a class="store-btn" href="https://apps.apple.com/app/idXXXXXXXXXX">
+             <img src="img/icon-96.png" alt="" width="36" height="36">
+             <span><small>Download on the</small>App Store</span>
+           </a> -->
+      <span class="store-btn">
+        <img src="img/icon-96.png" alt="" width="36" height="36">
+        <span><small>Coming soon to the</small>App Store</span>
+      </span>
+    </div>
+  </section>
+
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+    <p>© 2026 Cirjan Darius</p>
+  </div>
+</footer>
 </body>
 </html>
